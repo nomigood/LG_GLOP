@@ -155,7 +155,9 @@ h5 {font-size: 11px;color: #A02547;}
 .world_map span.lgear {top:370px;left:710px;}
 
 .company_grid {float:left;margin-left:10px;width:300px;height:478px;
-	border:1px solid #c5c5c5;-moz-border-radius: 6px; /*F/F브라우저별로*/
+	background:#f5f5f5;
+	outline:1px solid #ccc;
+	border:1px solid #FFFFFF;-moz-border-radius: 6px; /*F/F브라우저별로*/
 	-khtml-border-radius: 3px;
 	-webkit-border-radius: 3px;
 	border-radius: 3px;
