@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+	<title>:: LG Outsourcing Portal ::</title>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="Cache-Control" content="no-cache; no-store; no-save">
+	<meta name="google" value="notranslate">
+	<meta http-equiv="Pragma" content="no-cache">
+	<!-- shortcut icon -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<!-- CSS link -->
+	<!-- <link rel="stylesheet" type="text/css" href="common/css/style.css"> -->
+	<link rel="stylesheet" type="text/css" href="libs/css/ux.css">
+	<!-- <link rel="stylesheet" type="text/css" href="libs/css/default.css"> -->
+	<link rel="stylesheet" type="text/css" href="libs/css/common.css">
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,500,600,700' rel='stylesheet' type='text/css'>
+	
+	<script type="text/javascript" src="libs/js/core.js"></script>
+	<script type="text/javascript" src="libs/js/jquery-1.7.2.min.js"></script>
+	<!-- <script src="http://code.jquery.com/jquery-latest.js"></script> -->
+	
+	<script>
+		$(document).ready(function(){
+   			$('#toggleBtn').click(function(){
+   				if($(this).hasClass('ux-btn-plus')){
+   					$(this).removeClass("ux-btn-plus"); 
+   					$(this).addClass("ux-btn-minus");
+            		$(".ux_search_no").slideToggle("fast");
+		        }else{
+		        	$(this).removeClass("ux-btn-minus");
+		        	$(this).addClass("ux-btn-plus");           
+		            $(".ux_search_no").slideToggle("fast");
+		        }
+		        return false	
+   			});
+   			
+   		});
+   		
+
+	</script>
+	
+</head>
+<body>
+	<div id="wrap">
+		<div id="header">
+			
+			<div class="ux-content-wrap">
+				<h1 class="logo"><a href="#"><img src="images/lg_logo.gif" alt="LG Life's Good" /></a></h1>
+				<ul class="gnb">
+					<li><span><a href="#" class="active">Demand Planning</a></span>
+						<!-- 서브메뉴 -->
+						<ul class="dnone">
+						    <li><a href="#">Weekly Product PSI</a></li>
+						    <li><a href="#">Weekly Product PSI (Direct)</a></li>
+						    <li><a href="#">Daily Product PSI</a></li>
+						    <li><a href="#">Daily Product PSI (Direct)</a></li>
+						</ul>
+					</li>
+					<li><span><a href="#">PO &amp; Shipping</a></span>
+						<ul class="dnone">
+						    <li><a href="#">PO &amp; Invoicing </a></li>
+						</ul>
+					</li>
+					<li><span><a href="#">Notice</a></span>
+						<ul class="dnone">
+						    <li><a href="#">Notice</a></li>
+						</ul>
+					</li>
+					<li class="active"><span><a href="#">Material Planning</a></span>
+						<ul class="" style="left:-100px">
+						    <li><a href="#">FOC Balancing</a></li>
+						    <li><a href="#">Material PSI(Thru)</a></li>
+						    <li><a href="#">Material PO &amp; Shipping</a></li>
+						    <li><a href="#">DMaterial PSI(Direct)</a></li>
+						</ul>
+					</li>
+					<li><span><a href="#">Payment</a></span>
+						<ul class="dnone">
+						    <li><a href="#">Payment</a></li>
+						    <li><a href="#">Sample Test</a></li>
+						</ul>
+					</li>
+					<li><span><a href="#">admin</a></span>
+						<ul class="dnone">
+						    <li><a href="#">Leadtime Master</a></li>
+						</ul>
+					</li>
+					<li><span><a href="#">Dashboard</a></span>
+						<ul class="dnone">
+						    <li><a href="#">&nbsp;</a></li>
+						</ul>
+					</li>
+				</ul>
+				<span class="slogan">
+					<span>
+						<!-- approval -->
+						<a href="#">Appr <em id="">0</em></a>
+						<a href="#" class="ml10">Req <em id="">0</em></a>
+						<!-- //approval -->
+					</span>
+					<a href="#"><img src="images/lg_head_img.png" alt="GLOBAL LG OUTSOURCING PARTNER PORTAL"/></a>
+				</span>
+			</div>
+			
+			<div class="ux-content-wrap">
+				<div class="topnav">
+					<ul class="topleft">
+						<li><strong>Welcome, AR_ADMIN</strong></li>
+						<li><strong>Company :</strong> TCL&nbsp;&nbsp;<strong>Last Visit :</strong> 2013/02/18</li>
+					</ul>
+					<ul class="topright">
+						<li>
+							<select id="gnbUserCompany">
+								<option>aaa</option>
+							</select>
+						</li>
+						<li><a href="#"><img src="images/lg_top_logout.png" alt="logout"></a></li><!-- Logout -->
+						<li><a href="#"><img src="images/lg_top_contactus.png" title="In case of any questions or support needed." alt="contactus"></a></li><!-- Contact us -->
+						<li><a href="#"><img src="images/lg_top_manual.png" alt="Document DownLoad"></a></li>
+				        <li><a href="#"><img src="images/lg_top_changePW.png" alt="Password Change"></a></li><!-- password change -->
+	  	   			</ul>
+				</div>
+			</div>
+			
+			<div class="ux-content-wrap ">
+				<div class="ux-grid-search">
+					<div class="ux-search-title">
+						<h2 class="lfloat"><strong class="ux_dgray">Heading 2</strong> (Page Subject)</h2>
+						<div class="rfloat">
+							<!-- <button id="insertRow" class="ux-btn-plus"></button> -->
+							<button id="toggleBtn" class="ux-btn-plus"></button>
+						</div>
+					</div>
+					<div class="ux-search-no dnone">
+						<ul>
+							<li>
+								<label>Plan Week</label>
+								<select>
+									<option>[W08] 20130218</option>
+								</select>
+							</li>
+							<li>
+								<label>From Month</label>
+								<select>
+									<option>201302</option>
+								</select>
+							</li>
+							<li>
+								<label>To Month</label>
+								<select>
+									<option>201308</option>
+								</select>
+							</li>
+							<li>
+								<label>From Site</label>
+								<select>
+									<option>ARIMA_BR</option>
+								</select>
+							</li>
+							<li>
+								<label>Division</label>
+								<select>
+									<option>MEDIA</option>
+								</select>
+							</li>
+							<li>
+								<label>Category</label>
+								<select>
+									<option>...</option>
+								</select>
+							</li>
+						</ul>
+						<a id="loadData" class="ux-btn-default ux_dgray"><span><i class="icon_search"></i>Search</span></a>
+					</div> 
+				</div>
+			</div>
+		</div>
+		<div id="container">
+			<div class="ux-content-wrap mt10">
+				<div class="ux-grid-subject">
+					<h3>heading 3 (title)</h3>
+					<a id="insertRow" class="ux-btn-plus"></a>
+				</div>
+				<div class="ux-btn-area mt10">
+					<h4 class="ux-grid-title"><strong class="ux_dgray">Headign 4</strong> (title)</h4>
+					<div class="rfloat">
+						<button id="ediMoniteringColumnConfig" class="ux-btn-setting"><span><!--설정--></span></button>
+			            <button id="informationExcelUploadIod" class="ux-btn-exel"><span><!--엑셀저장--></span></button>
+		            </div>
+	            </div>
+				<!-- weeklyThru -->
+		        <div id="layout-middle" class="ux-grid-wrap">
+		            <!-- 그리드 영역 -->
+				    <div id="BottomGridInc" class="mt5">
+				    	<table class="approval">
+				    		<colgroup>
+				    			<col width="180">
+				    			<col width="">
+				    			<col width="">
+				    			<col width="">
+				    			<col width="">
+				    			<col width="">
+				    			<col width="">
+				    			<col width="">
+				    		</colgroup>
+				    		<thead>
+								<tr>
+								    <th scope="row">Category</th>
+								    <td>Invoice</td>
+								    <th>Status</th>
+								    <td>Approved</td>
+								    <th>Created Date</th>
+								    <td>25/02/2013</td>
+								    <th>Requested By</th>
+								    <td>Test AR User</td>
+							  	</tr>
+						  	</thead>
+						  	<tbody>
+							 	<tr>
+									<th scope="row"><label for="approvalSubject">Subject</label></th>
+								    <td colspan="7" class="app_active"><input type="text" id="approvalSubject" name="" size="100"/></td>
+							  	</tr>
+							 	<tr>
+								    <th scope="row"><label for="jobResult">Contents</label></th>
+								    <td colspan="7"><textarea id="jobResult" name="jobResult" rows="10" cols="80"></textarea></td>
+							  	</tr>
+						  	</tbody>
+						</table>
+				    					       
+			        	<div class="approval_grid">
+			        		<div class="subject">
+			        			<p>Approval Line</p>
+			        		</div>
+			        		<div class="ctn">
+			        			그리드영역
+			        		</div>
+			        	</table>
+				        				        
+				        <div class="ux-grid-btm">
+					        <!-- 날짜 선택 -->
+					        <div class="ux-search-date rfloat">
+					            <a id="loadSearchData" class="ux-btn-default"><span><i class="icon_save"></i>Save</span></a>
+					            <a id="loadSearchData" class="ux-btn-default"><span><i class="icon_accept"></i>Request Approval</span></a>
+					            <a id="loadSearchData" class="ux-btn-default"><span><i class="icon_cancel"></i>cancel</span></a>
+					        </div>
+					        <!-- 날짜 선택 -->  
+					    </div>
+					    
+					    <table class="app_table">
+					    	<colgroup>
+					    		<col width=""/>
+					    		<col width=""/>
+					    	</colgroup>
+					    	<tbody>
+					    		<tr>
+					    			<th>title</th>
+					    			<td>content</td>
+					    		</tr>
+					    		<tr>
+					    			<th>title</th>
+					    			<td>content</td>
+					    		</tr>
+					    		<tr>
+					    			<th>title</th>
+					    			<td>content</td>
+					    		</tr>
+					    	</tbody>
+					    </table>
+				    </div>
+		            <!-- //그리드 영역 -->
+	        	</div>
+	        </div>
+		</div>
+	</div>
+</body>
+</html>

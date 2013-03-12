@@ -1,0 +1,768 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+	<title>:: LG Outsourcing Portal ::</title>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="Cache-Control" content="no-cache; no-store; no-save">
+	<meta name="google" value="notranslate">
+	<meta http-equiv="Pragma" content="no-cache">
+	<!-- shortcut icon -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<!-- CSS link -->
+	<!-- <link rel="stylesheet" type="text/css" href="common/css/style.css"> -->
+	<link rel="stylesheet" type="text/css" href="libs/css/ux.css">
+	<!-- <link rel="stylesheet" type="text/css" href="libs/css/default.css"> -->
+	<link rel="stylesheet" type="text/css" href="libs/css/common.css">
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,500,600,700' rel='stylesheet' type='text/css'>
+	
+	<script type="text/javascript" src="libs/js/core.js"></script>
+	<script type="text/javascript" src="libs/js/jquery-1.7.2.min.js"></script>
+	<!-- <script src="http://code.jquery.com/jquery-latest.js"></script> -->
+	
+	<script>
+		$(document).ready(function(){
+   			$('#toggleBtn').click(function(){
+   				if($(this).hasClass('ux-btn-plus')){
+   					$(this).removeClass("ux-btn-plus"); 
+   					$(this).addClass("ux-btn-minus");
+            		$(".ux-search-no").slideToggle("fast");
+		        }else{
+		        	$(this).removeClass("ux-btn-minus");
+		        	$(this).addClass("ux-btn-plus");           
+		            $(".ux-search-no").slideToggle("fast");
+		        }
+		        return false	
+   			});
+   			
+   		});
+   		
+
+	</script>
+	
+</head>
+<body>
+	<!-- loadign -->
+	<!-- <div class="ux-modal-loading">
+		<div class="ux-loading"><img src="libs/img/gif-load.gif"/></div>
+	</div> -->
+	<!-- //loadign -->
+	
+	<!-- layer popup -->
+	<!-- <div class="ux-popup-wrap ui-draggable" style="top: 151.5px; left: 655px; z-index: 1500; display: block;">
+		<div class="ux-popup-title">
+			<h3>excel Upload</h3>
+			<button class="ux-btn-popup-close"></button>
+		</div>
+		<div class="ux-popup-content">
+			<table>
+				<tbody>
+					<tr>
+						<td>
+							<div id="popupExcelUploadIod" class="ux-layer-plan">
+								<iframe style="display:none;" name="popupExcelUploadIodIFrame" id="popupExcelUploadIodIFrame"></iframe>
+								<form enctype="multipart/form-data" method="post" action="" name="popupExcelUploadIodForm" target="popupExcelUploadIodIFrame">
+									<div style="width:100;height:100;padding: 20px;">
+										<input type="text" name="popupExcelUploadIodFile" id="popupExcelUploadIodFile">
+										<input type="submit" style="display:none;">
+									</div>
+									<div class="ux-layer-button">
+										<a class="ux-btn-default"><span>OK</span></a>
+										<a class="ux-btn-default"><span>Cancel</span></a>
+									</div>
+								</form>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div class="ux-popup-overlay"></div> --> <!-- 이 줄을 삭제하면 배경 컨트롤 가능 -->
+	<!-- //layer popup -->
+	<div id="wrap">
+		<div id="header">
+			
+			<div class="ux-content-wrap">
+				<h1 class="logo"><a href="#"><img src="images/lg_logo.gif" alt="LG Life's Good" /></a></h1>
+				<ul class="gnb">
+					<li class="active"><span><a href="#" class="active">Demand Planning</a></span>
+						<!-- 서브메뉴 -->
+						<ul class="">
+						    <li><a href="#">Weekly Product PSI</a></li>
+						    <li><a href="#">Weekly Product PSI (Direct)</a></li>
+						    <li><a href="#">Daily Product PSI</a></li>
+						    <li><a href="#">Daily Product PSI (Direct)</a></li>
+						</ul>
+					</li>
+					<li><span><a href="#">PO &amp; Shipping</a></span>
+						<ul class="dnone">
+						    <li><a href="#">PO &amp; Invoicing </a></li>
+						</ul>
+					</li>
+					<li><span><a href="#">Notice</a></span>
+						<ul class="dnone">
+						    <li><a href="#">Notice</a></li>
+						</ul>
+					</li>
+					<li><span><a href="#">Material Planning</a></span>
+						<ul class="dnone" style="left:-100px">
+						    <li><a href="#">FOC Balancing</a></li>
+						    <li><a href="#">Material PSI(Thru)</a></li>
+						    <li><a href="#">Material PO &amp; Shipping</a></li>
+						    <li><a href="#">DMaterial PSI(Direct)</a></li>
+						</ul>
+					</li>
+					<li><span><a href="#">Payment</a></span>
+						<ul class="dnone">
+						    <li><a href="#">Payment</a></li>
+						    <li><a href="#">Sample Test</a></li>
+						</ul>
+					</li>
+					<li><span><a href="#">admin</a></span>
+						<ul class="dnone">
+						    <li><a href="#">Leadtime Master</a></li>
+						</ul>
+					</li>
+					<li><span><a href="#">Dashboard</a></span>
+						<ul class="dnone">
+						    <li><a href="#">&nbsp;</a></li>
+						</ul>
+					</li>
+				</ul>
+				<span class="slogan">
+					<span>
+						<!-- approval -->
+						<a href="#">Appr <em id="">0</em></a>
+						<a href="#" class="ml10">Req <em id="">0</em></a>
+						<!-- //approval -->
+					</span>
+					<a href="#"><img src="images/lg_head_img.png" alt="GLOBAL LG OUTSOURCING PARTNER PORTAL"/></a>
+				</span>
+			</div>
+			
+			<div class="ux-content-wrap">
+				<div class="topnav">
+					<ul class="topleft dnone">
+						<li><strong>Welcome, AR_ADMIN</strong></li>
+						<li><strong>Company :</strong> TCL&nbsp;&nbsp;<strong>Last Visit :</strong> 2013/02/18</li>
+					</ul>
+					<ul class="topright">
+						<li>
+							<select id="gnbUserCompany">
+								<option>aaa</option>
+							</select>
+						</li>
+						<li><a href="#"><img src="images/lg_top_logout.png" alt="logout"></a></li><!-- Logout -->
+						<li><a href="#"><img src="images/lg_top_contactus.png" title="In case of any questions or support needed." alt="contactus"></a></li><!-- Contact us -->
+						<li><a href="#"><img src="images/lg_top_manual.png" alt="Document DownLoad"></a></li>
+				        <li><a href="#"><img src="images/lg_top_changePW.png" alt="Password Change"></a></li><!-- password change -->
+	  	   			</ul>
+				</div>
+			</div>
+		</div>
+		<div id="container">
+			<div class="ux-content-wrap ">
+				<div class="ux-grid-search">
+					<div class="ux-search-title">
+						<h2 class="ux-grid-title"><strong class="ux_dgray">Heading 2</strong> (Page Subject)</h2>
+						<!-- <h4 class="ux-grid-title"><strong class="ux_dgray">Weekly Product PSI</strong></h4> -->
+						<div class="rfloat">
+							<!-- <button id="insertRow" class="ux-btn-plus"></button> -->
+							<button id="toggleBtn" class="ux-btn-plus"></button>
+						</div>
+					</div>
+					<div class="ux-search-no">
+						<ul>
+							<li>
+								<label>Plan Week</label>
+								<select>
+									<option>[W08] 20130218</option>
+									<option>[W08] 20130218</option>
+									<option>[W08] 20130218</option>
+									<option>[W08] 20130218</option>
+									<option>[W08] 20130218</option>
+								</select>
+							</li>
+							<li>
+								<label>From Month</label>
+								<select>
+									<option>201302</option>
+								</select>
+							</li>
+							<li>
+								<label>To Month</label>
+								<select>
+									<option>201308</option>
+								</select>
+							</li>
+							<li>
+								<label>From Site</label>
+								<select>
+									<option>ARIMA_BR</option>
+								</select>
+							</li>
+							<li>
+								<label>Division</label>
+								<select>
+									<option>MEDIA</option>
+								</select>
+							</li>
+							<li>
+								<label>Category</label>
+								<select>
+									<option>...</option>
+								</select>
+							</li>
+						</ul>
+						<a id="loadData" class="ux-btn-default ux_dgray"><span><i class="icon_search"></i>Search</span></a>
+					</div> 
+				</div>
+			</div>
+			<div class="ux-content-wrap">
+				<div class="ux-grid-subject">
+					<h3>heading 3 (title)</h3>
+					<a id="insertRow" class="ux-btn-plus"></a>
+				</div>
+				<div class="ux-btn-area mt10">
+					<!-- <h4 class="ux_grid_title"><strong class="ux_dgray">Headign 4</strong> (title)</h4> -->
+					<div class="rfloat">
+						<button id="" class="btn_full" title="창최대화"><span></span></button>
+			            <button id="" class="btn_mini" title="이전크기"><span></span></button>
+			            <button id="" class="btn_move_left" title="왼쪽이동"><span></span></button>
+			            <button id="" class="btn_move_right" title="오른쪽이동"><span></span></button>
+			            <button id="" class="btn_refresh" title="새로고침"><span></span></button>
+			            <button id="" class="btn_reset" title="재설정"><span></span></button>
+			            <button id="" class="btn_setting" title="설정"><span></span></button>
+			            <button id="" class="btn_zoom_in" title="줌인"><span></span></button>
+			            <button id="" class="btn_zoom_out" title="줌아웃"><span></span></button>
+			            <button id="" class="btn_excel_up" title="엑셀업로드"><span></span></button>
+			            <button id="" class="btn_excel_down" title="엑셀다운로드"><span></span></button>
+		            </div>
+	            </div>
+				<!-- weeklyThru -->
+		        <div id="layout-middle" class="ux-grid-wrap">
+		            <!-- 그리드 영역 --> 
+		            <div id="weeklyThruGrid" class="ux-grid-table">
+		            	<div class="grid-header">
+		            		<div class="grid-header-fix" style="width: 694px;">
+		            			<table class="grid-table" style="height:60px;">
+		            				<colgroup>
+		            					<col width="24" />
+		            					<col width="50" />
+		            					<col width="120" />
+		            					<col width="120" />
+		            					<col width="380" />
+		            				</colgroup>
+									<thead>
+										<tr>
+											<th><input type="checkbox" /></th>
+											<th>New Flag</th>
+											<th><input type="text" size="10"/></th>
+											<th>
+												<select>
+													<option>Board Type</option>
+												</select>
+											</th>
+											<th>Title</th>
+										</tr>
+									</thead>
+								</table>
+		            		</div>
+		            		<div class="grid-header-org" style="width: 100%; padding-left: 694px;">
+		            			<table class="grid-table" style="width:1300px;height:60px;">
+		            				<colgroup>
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            				</colgroup>
+									<thead>
+										<tr>
+											<th>W08<br/>(This)<br/>02/18</th>
+											<th>W08<br/>(This)<br/>02/18</th>
+											<th>W08<br/>(This)<br/>02/18</th>
+											<th>W08<br/>(This)<br/>02/18</th>
+											<th>W08<br/>(This)<br/>02/18</th>
+											<th>W08<br/>(This)<br/>02/18</th>
+											<th>W08<br/>(This)<br/>02/18</th>
+											<th>W08<br/>(This)<br/>02/18</th>
+											<th>W08<br/>(This)<br/>02/18</th>
+											<th>W08<br/>(This)<br/>02/18</th>
+											<th>W08<br/>(This)<br/>02/18</th>
+											<th>W08<br/>(This)<br/>02/18</th>
+											<th>W08<br/>(This)<br/>02/18</th>
+											<th>W08<br/>(This)<br/>02/18</th>
+											<th>W08<br/>(This)<br/>02/18</th>
+											<th>W08<br/>(This)<br/>02/18</th>
+											<th>W08<br/>(This)<br/>02/18</th>
+											<th>W08<br/>(This)<br/>02/18</th>
+											<th>W08<br/>(This)<br/>02/18</th>
+											<th>W08<br/>(This)<br/>02/18</th>
+											<th>W08<br/>(This)<br/>02/18</th>
+											<th>W08<br/>(This)<br/>02/18</th>
+											<th>W08<br/>(This)<br/>02/18</th>
+											<th>W08<br/>(This)<br/>02/18</th>
+											<th>W08<br/>(This)<br/>02/18</th>
+											<th>W08<br/>(This)<br/>02/18</th>							
+										</tr>
+									</thead>
+								</table>
+		            		</div>
+		            	</div>
+		            	<div class="grid-body-fix" style="width: 694px; height: 300px;">
+		            		<table class="grid-table" style="width: 694px;">
+		            			<colgroup>
+		            					<col width="24" />
+		            					<col width="50" />
+		            					<col width="120" />
+		            					<col width="120" />
+		            					<col width="380" />
+		            			</colgroup>
+								<tbody>
+									<tr>
+										<td class=""><input type="checkbox"/></td>
+										<td class=""></td>
+										<td class="edit"><input type="text" value="TCL"/></td>
+										<td class="edit"><input type="text" value="General Notice"/></td>
+										<td class="edit"><input type="text" value="test"/></td>
+									</tr>
+									<tr class="even_num">
+										<td class=""><input type="checkbox"/></td>
+										<td class=""></td>
+										<td class="edit"><input type="text" value="ALL"/></td>
+										<td class="select"><input type="text" value="Development"/></td>
+										<td class="edit"><input type="text" value="test"/></td>
+									</tr>
+									<tr class="selected">
+										<td class=""><input type="checkbox"/></td>
+										<td class=""></td>
+										<td class="edit"><input type="text" value="TCL"/></td>
+										<td class="edit"><input type="text" value="General Notice"/></td>
+										<td class="edit"><input type="text" value="test"/></td>
+									</tr>
+									<tr class="even_num">
+										<td class=""><input type="checkbox"/></td>
+										<td class=""></td>
+										<td class="edit"><input type="text" value="TCL"/></td>
+										<td class="edit"><input type="text" value="Development"/></td>
+										<td class="edit"><input type="text" value="test"/></td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="grid-table grid-table-summary" style="width: 694px;">
+								<colgroup>
+	            					<col width="100" />
+	            					<col width="100" />
+	            					<col width="100" />
+	            					<col width="100" />
+	            					<col width="100" />
+	            					<col width="100" />
+	            				</colgroup>
+								<tr class="ux-summary">
+									<td>Group</td>
+									<td>Product Type</td>
+									<td>Model Suffix</td>
+									<td>To Site</td>
+									<td>Transport</td>
+									<td>Category</td>
+								</tr>
+							</table>
+		            	</div>
+		            	<div class="grid-body" style="width: 100%; height: 317px;">
+		            		<div class="grid-body-org" style="padding-left: 694px">
+		            			<table class="grid-table" style="width:1300px;">
+		            				<colgroup>
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            				</colgroup>
+									<tbody>
+										<tr>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="edit number"><input type="text" id="" class="" value="0" size="1"/></td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>							
+										</tr>
+										<tr>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="edit number"><input type="text" id="" class="number" value="0" size="1"/></td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>							
+										</tr>
+										<tr class="selected">
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="edit number"><input type="text" id="" class="number" value="0" size="1"/></td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>							
+										</tr>
+										<tr>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="edit number"><input type="text" id="" class="number" value="0" size="1"/></td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>							
+										</tr>
+									</tbody>
+								</table>
+								<table class="grid-table grid-table-summary" style="width:1300px;">
+									<colgroup>
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            					<col width="50" />
+		            				</colgroup>
+									<tfoot>
+										<tr class="ux-summary">
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+											<td class="number">0</td>
+										</tr>
+									</tfoot>
+								</table>
+		            		</div>
+		            	</div>
+		            </div>
+		            <!-- //그리드 영역 -->
+	        	</div>
+	        	
+	        	<!-- 페이징 및 버튼 영역 -->
+				<div class="ux-grid-btm">
+					<div class="lfloat">
+						<div class="paginate_complex" id="bookingGridPager">
+							<a href="#">←</a>
+							<a href="#">1</a>
+							<a href="#">2</a>
+							<a href="#">3</a>
+							<a href="#">4</a>
+							<a href="#">5</a>
+							<a href="#" class="direction next">→</a>
+						</div> 
+						<div class="ux-grid-page-info" id="bookingGridPagerSummary">1 / 4 page , total 10 Records (1 ~ 3 ) </div>
+					</div>
+					<div class="dhx_pbox_btn">
+						<a id="saveData" class="ux-btn-default"><span><i class="icon_save"></i>Save</span></a>
+					</div>
+					<div class="dhx_pbox_skyblue"></div>
+				</div>
+				<!-- //페이징 및 버튼 영역 -->
+	        </div>
+	        
+	       <div class="ux-content-wrap mt10">
+				<div class="ux-grid-subject">
+					<h3>heading 3 (title)</h3>
+					<a id="insertRow" class="ux-btn-plus"></a>
+				</div>
+				<div class="ux-btn-area">
+					<h4 class="ux-grid-title"><strong class="ux_dgray">Headign 4</strong> (title)</h4>
+					<div class="rfloat">
+						<button id="" class="btn_full" title="창최대화"><span></span></button>
+			            <button id="" class="btn_mini" title="이전크기"><span></span></button>
+			            <button id="" class="btn_move_left" title="왼쪽이동"><span></span></button>
+			            <button id="" class="btn_move_right" title="오른쪽이동"><span></span></button>
+			            <button id="" class="btn_refresh" title="새로고침"><span></span></button>
+			            <button id="" class="btn_reset" title="재설정"><span></span></button>
+			            <button id="" class="btn_setting" title="설정"><span></span></button>
+			            <button id="" class="btn_zoom_in" title="줌인"><span></span></button>
+			            <button id="" class="btn_zoom_out" title="줌아웃"><span></span></button>
+			            <button id="" class="btn_excel_up" title="엑셀업로드"><span></span></button>
+			            <button id="" class="btn_excel_down" title="엑셀다운로드"><span></span></button>
+		            </div>
+	            </div>
+				<!-- weeklyThru -->
+		        <div id="layout-middle" class="ux-grid-wrap">
+		            <!-- 그리드 영역 --> 
+		            <div id="weeklyThruGrid" class="ux-grid-table">
+		            	<div class="grid-header">
+		            		<div class="grid-header-org" style="width: 100%;">
+		            			<table class="grid-table">
+		            				<colgroup>
+		            					<col width="" />
+		            					<col width="" />
+		            					<col width="" />
+		            					<col width="" />
+		            					<col width="" />
+		            					<col width="" />
+		            				</colgroup>
+									<thead>
+										<tr>
+											<th>Group</th>
+											<th>Product Type</th>
+											<th>Model Suffix</th>
+											<th rowspan="2">To Site</th>
+											<th>Transport</th>
+											<th rowspan="2">Category</th>
+										</tr>
+										<tr>
+											<th>
+												<input type="text" id=""/>
+											</th>
+											<th>
+												<input type="text" id=""/>
+											</th>
+											<th>
+												<input type="text" id=""/>
+											</th>
+											<th>Mode</th>
+										</tr>
+									</thead>
+								</table>
+		            		</div>
+		            	</div>
+		            	<div class="grid-body" style="width: 100%; height:200px;">
+		            		<div class="grid-body-org">
+		            			<table class="grid-table" style="width: 100%;">
+									<tbody>
+										<tr>
+											<td class="colresize">Group</td>
+											<td class="colresize">Product Type</td>
+											<td class="colresize">Model Suffix</td>
+											<td class="colresize">To Site</td>
+											<td class="colresize">Transport</td>
+											<td class="colresize">Category</td>
+										</tr>
+										<tr>
+											<td class="colresize">Group</td>
+											<td class="colresize">Product Type</td>
+											<td class="colresize">Model Suffix</td>
+											<td class="colresize">To Site</td>
+											<td class="colresize">Transport</td>
+											<td class="colresize">Category</td>
+										</tr>
+										<tr>
+											<td class="colresize">Group</td>
+											<td class="colresize">Product Type</td>
+											<td class="colresize">Model Suffix</td>
+											<td class="colresize">To Site</td>
+											<td class="colresize">Transport</td>
+											<td class="colresize">Category</td>
+										</tr>
+										<tr class="selected">
+											<td class="colresize">Group</td>
+											<td class="colresize">Product Type</td>
+											<td class="colresize edit"><input type="text" id="" class="calign" value="0" size="1"/></td>
+											<td class="colresize">To Site</td>
+											<td class="colresize">Transport</td>
+											<td class="colresize">Category</td>
+										</tr>
+									</tbody>
+								</table>
+								<table class="grid-table grid-table-summary" style="width: 100%;">
+									<tr class="ux-summary">
+										<td>Group</td>
+										<td>Product Type</td>
+										<td>Model Suffix</td>
+										<td>To Site</td>
+										<td>Transport</td>
+										<td>Category</td>
+									</tr>
+								</table>
+		            		</div>
+		            	</div>
+		            </div>
+		            <!-- //그리드 영역 -->
+	        	</div>
+	        	
+	        	<!-- 페이징 및 버튼 영역 -->
+				<div class="ux-grid-btm">
+					<!-- <div class="lfloat">
+						<div class="paginate_complex" id="bookingGridPager">
+							<a href="#" class="direction prev">←</a>
+							<a href="#">1</a>
+							<a href="#">2</a>
+							<a href="#">3</a>
+							<a href="#">4</a>
+							<a href="#">5</a>
+							<a href="#" class="direction next">→</a>
+						</div> 
+						<div class="ux-grid-page-info" id="bookingGridPagerSummary">1 / 4 page , total 10 Records (1 ~ 3 ) </div>
+					</div> -->
+					<div class="dhx_pbox_btn">
+						<a id="saveData" class="ux-btn-default"><span><i class="icon_save"></i>Save</span></a>
+						<a id="loadSearchData" class="ux-btn-default"><span><i class="icon_cancel"></i>cancel</span></a>
+					</div>
+					<div class="dhx_pbox_skyblue"></div>
+				</div>
+				<!-- //페이징 및 버튼 영역 -->
+	        </div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+.L-grid-panel .L-panel {
+	border-width: 0px 0 0px 0;
+	font: 11px Tahoma,Dotum,gulim,AppleGothic,sans-serif;
+	border-top:0px solid #3d648c;
+}
+
+.L-grid-row-even {background-color:#ffffff;}
+.L-grid-row-odd {background-color:#f1f2f2;}
+
+.L-grid-col-line .L-grid-row td.L-grid-cell {border-right-color:#ffffff;border-bottom-color:#ffffff;}
+
+.L-grid-header table td {border-right-color:#ffffff;}
+
+.L-grid-header {border-top:2px solid #b21553;}

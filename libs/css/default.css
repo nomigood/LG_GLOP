@@ -1,0 +1,344 @@
+@charset "utf-8";
+/* ============================================================
+ * disital bay system
+ * nomi (nomisoul@gmail.com)
+ * 2013.02.19
+============================================================ */
+
+/**************************************************************
+ * reset
+ **************************************************************/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, figure, figcaption, footer, #header .gnb, hgroup,
+menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;font-style:normal;}
+body,input,textarea,select,button,table{font-family:verdana, arial, tahoma, sans-serif, 'MS Gothic';font-size:11px;-webkit-text-size-adjust:none;}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after {content: '';content: none;}
+table {border-collapse: collapse;border-spacing: 0;}
+img,button {border:0 none;}
+button {cursor:pointer;}
+button * {position:relative}
+
+/****************************************************************
+ * link
+ ***************************************************************/
+a {text-decoration: none}
+a:link {color: #555555;text-decoration: none;}
+a:visited {color: #555555;text-decoration: none;}
+a:hover,a:focus,a:active {color: #000000;text-decoration: none;}
+
+/****************************************************************
+ * heading
+ ***************************************************************/
+h1 {float: left;margin: 0;padding: 0px 0 0 5px;}
+h2 {font-size: 18px;color: #a5204d;}
+h3 {font-size: 16px;color: #A02547;} /*타이틀색상변경*/
+h4 {font-size: 14px;color: #555555;}  /*타이틀색상변경*/
+h5 {font-size: 11px;color: #A02547;}
+
+/****************************************************************
+ * button font color
+ ***************************************************************/
+.ux_red {color:#b40243;}
+.ux_white {color:#fff;}
+.ux_dgray {color:#333;}
+
+/****************************************************************
+ * layout
+ ***************************************************************/
+#wrap {width: 100%;	min-width:1200px;height: 100%;}
+#header {width: 100%;height: auto;background: url(../../images/lg_menu_back.gif) repeat-x left top;overflow:hidden}
+.section {padding:0 20px;overflow:hidden;}
+.section strong {font-weight:bold;}
+
+/****************************************************************
+ * header
+ ***************************************************************/
+#header h1 {float:left;width:99px;height:58px;}
+
+/****************************************************************
+ * header
+ ***************************************************************/
+/* navigation */
+#header .gnb {position:absolute;width:930px;height:auto;top:20px;left:140px;}
+#header .gnb li {float:left;position:relative;height:40px;text-align:center}
+#header .gnb li:hover {background: url(../../images/lg_submenu_top_left.png) no-repeat left top;}
+#header .gnb li a {padding:10px 20px 0;height:30px;color: #3f3f3f;font-size: 1.272727272727273em;font-weight: 700;display:block;overflow:hidden}
+#header .gnb li a:hover {color: #ffffff;background: url(../../images/lg_submenu_top_right.png) no-repeat right top;}
+#header .gnb li.active {background: url(../../images/lg_submenu_top_left.png) no-repeat left top;}
+#header .gnb li a.active {color: #ffffff;background: url(../../images/lg_submenu_top_right.png) no-repeat right top;}
+
+/*sub nav*/
+#header .gnb li ul {position:absolute;left:0;width:800px;font-family: sans-serif;}
+#header .gnb li ul li:hover {background:none}
+#header .gnb li ul li a {float:left;padding:7px 10px;font-size:12px;color: #fddbe9;}
+#header .gnb li ul li a:hover {background:none}
+
+/*top right*/
+#header .slogan {float:right;position:relative;}
+#header .slogan span {position:absolute;top:10px;left:-150px;width:150px;text-align:right;}
+#header .slogan span a {font-weight:bold;}
+#header .slogan span em {color:#0000FF}
+
+/*info nav*/
+#header .topnav {width:100%;height:30px;overflow:hidden;}
+#header .topnav ul li {float:left;margin-left:5px;}
+#header .topnav .topleft {float:left;margin-left:15px;height: 29px;line-height:29px;color:#fff;font-weight: bold;}
+#header .topnav .topleft li {margin-right:160px;}
+#header .topnav .topright {float:right;}
+#header .topnav .topright li {margin-top:6px;}
+
+/************************************************************************************************************ 
+	search
+************************************************************************************************************/
+.ux_search_bg {background:url(../img/bg_search.gif) repeat-x left bottom; background-color:#f5f5f5;}
+.ux_grid_search {position:relative;width:100%;overflow:hidden}
+.ux_grid_search label {position:relative; top:4px; padding-left:8px; background:url(../img/bul_dot.png) no-repeat left 50%; font-weight:bold;display:inline-block;}
+.ux_grid_search a.ux-btn-default {float:right;}
+.ux_search_title {padding:10px 0 10px; overflow:hidden;}
+/*search form*/
+.ux_search_no {padding:7px 0; border-top:1px solid #b9b1b4; overflow:hidden;}
+.ux_search_no ul {float:left;}
+.ux_search_no ul li {float:left;margin-top:3px;margin-right:10px;}
+.ux_search_no ul li:last-of-type {margin-right:0}
+.ux_search_no label {vertical-align:top; margin-top:0;}
+.ux_search_no select {margin-left:3px;padding-left:2px;height:20px;border:1px solid #d5d5d5}
+.ux_search_no input.ux-input-no {margin:0 15px ; vertical-align:top;}
+
+/************************************************************************************************************ 
+	그리드 
+************************************************************************************************************/
+.ux-grid-wrap {position:relative; zoom:1; /*overflow:hidden;*/ }
+.ux-grid-wrap select {padding-left:2px;height:20px;border:1px solid #d5d5d5}
+
+/************************************************************************************************************ 
+	그리드 그룹 
+************************************************************************************************************/
+.ux-grid-group {position:relative; zoom:1; overflow:hidden;}
+.ux-grid-group .ux-fleft {float:left; width:auto;}
+.ux-grid-group .ux-fright {float:right; width:auto;}
+
+/************************************************************************************************************ 
+	좌,우 이동 버튼 
+************************************************************************************************************/
+.ux-grid-move-data {position:absolute; left:50%; top:50%; margin:-40px 0 0 -12px; *position:inline; *float:left; *margin:80px 0 0 8px;}
+.ux-grid-move-data button {margin:0 0 5px 0; }
+
+/************************************************************************************************************ 
+	타이틀 
+************************************************************************************************************/
+
+.ux_grid_subject {position:relative; height:42px;line-height:35px;background:url(../../images/glopp_layout_header_bar.gif) repeat-x 0 0}
+.ux_grid_subject h3 {float:left;font-weight:bold;}
+.ux_grid_subject a.ux-btn-plus {position:absolute;width:20px; height:18px;top:8px; left:300px;background:url(../img/btn_plus.gif) no-repeat left top; display:block;overflow:hidden;}
+
+.ux_grid_title {float:left;padding:1px 0;height:15px;line-height:15px;background:url(../img/bul_h2.png) no-repeat left 50%;overflow:hidden;text-indent:20px;}
+
+.ux_btn_area {margin-top:0;width:100%;overflow:hidden;}
+.ux_btn_area button {float:left;margin:3px 0 0 3px;}
+.ux_btn_area .ux-btn-default {float:left;margin-left:3px;}
+
+.ux_grid_title button.ux-btn-exel {float:right; margin-left:3px;}
+.ux_grid_title button.ux-btn-setting {float:right; margin-left:3px;}
+.ux_grid_title button.ux-btn-zoom-in{float:right; margin-left:3px;}
+.ux_grid_title button.ux-btn-zoom-out{float:right; margin-left:3px;}
+
+.ux_grid_title .ux-plan-id {float:left;}
+.ux_grid_title .ux-plan-id .ux-plan-title {float:left; position:relative; top:6px; margin-left:10px;}
+.ux_grid_title .ux-plan-id .ux-select-box-plan {float:left; position:relative; top:3px; margin-left:5px;}
+.ux-grid-name {float:left; padding:5px 0 0 5px;}
+.ux-grid-name span{color:#b40243;}
+.ux-grid-optxt{float:right; padding:5px 5px 0px 0px;}
+.ux-plan-id .ux-plan-title {color:#000;}
+.ux-plan-id .ux-plan-title span {color:#b40243;}
+.ux_grid_title .ux-grid-plan{float:left; display:block; margin-top:7px;}
+.ux_grid_title .-info {float:left; height:15px; font-size:11px; margin-top:5px; padding:1px 5px 0 18px;}
+.ux_grid_title2{position:relative; height:24px; zoom:1; z-index:30; float:left;}
+.ux_grid_title2 span {float:left; height:15px; font-size:11px; color:#000; margin-top:5px; padding:1px 5px 0 5px; font-weight:bold;}
+
+/************************************************************************************************************ 
+	그리드 테이블
+************************************************************************************************************/
+.ux-grid-table {position:relative; margin:5px 0 10px;border:1px solid #D0D1D1; border-top:none;overflow:hidden;}
+.ux-grid-table .grid-header {position:relative;color:#474747;}
+.ux-grid-table .grid-header-fix {position:absolute; left:0; top:0; z-index:5;}
+.ux-grid-table .grid-header-org {margin-right:17px; overflow:hidden;}
+.ux-grid-table .grid-body-fix {position:absolute; left:0; z-index:10; background:#F6F6F6; overflow:hidden;}
+.ux-grid-table .grid-body {position:relative;_width:100%;background:#fff; overflow:auto;}
+
+.ux-grid-table .grid-body a.ux-btn-default {display:inline-block; width:auto; height:28px; padding-left:6px; background:url(../img/bg_btn_left.gif) no-repeat left top; zoom:1; overflow:hidden; cursor:pointer;}
+.ux-grid-table .grid-body a.ux-btn-default span {display:block; float:left; height:22px; padding:6px 12px 0 6px; font-size:11px; color:#b40243; background:url(../img/bg_btn_right.gif) no-repeat right top; font-weight:bold;}
+
+.grid-header-fix table,
+.grid-header-org table {height:55px;border-top:2px solid #AF2841;border-bottom:2px solid #C8C8C8;}
+
+table.grid-table {table-layout:fixed;width:100%;position:relative;}
+table.grid-table thead {height:auto;}
+table.grid-table thead tr {height:auto;background-image: url(../img/sky_blue_grid.gif);}
+table.grid-table thead tr th {height:auto;padding:5px; border-right:1px solid #C8C8C8;border-bottom:1px solid #C8C8C8; vertical-align:middle; font-weight: bold;}
+table.grid-table thead tr th.ux-icon-asc span {background:url(../img/icon_asc.gif) no-repeat right center;}
+table.grid-table thead tr th.ux-icon-desc span {background:url(../img/icon_desc.gif) no-repeat right center;}
+table.grid-table thead tr th .ux-grid-rel {margin-top:-4px}
+table.grid-table thead tr th input[type=text] {width:80%;padding-left:2px;height:16px;border:1px solid #d5d5d5}
+table.grid-table thead tr th span {display:block; overflow:hidden; text-align:center; margin:0}
+table.grid-table thead tr th span em {display:block; white-space:nowrap; overflow:hidden;cursor:default;}
+table.grid-table tr.ux-selected td{background-color:#fce1eb;}
+table.grid-table tr.ux-even td {background-color:#ffffff;}
+#table.grid-table tr.ux-even td {background-color:#fff4f8;}
+
+table.grid-table tbody tr {border-top:1px solid #ffffff;}
+table.grid-table tbody tr:hover {border-top:1px solid #ec879a;border-bottom:1px solid #ec879a;}
+table.grid-table tr td:hover {background:#FFCADD;color:#333} 
+table.grid-table tr td input {border:none;width:100%;height:100%;box-sizing:border-box;}
+table.grid-table tr td.edit {/*border:1px solid #ccc;*/}
+table.grid-table tr td.edit input[type=text] {text-align:center;display:block;background:#FFF0F0}
+table.grid-table tr td.edit input[type=text]:hover {cursor:pointer;}
+table.grid-table tr td input[type=text].number {text-align:right}
+table.grid-table tr td {height:20px;font-family:Tahoma; text-align:center;overflow:hidden;}
+table.grid-table tr td.number {text-align:right;}
+table.grid-table tr td span {display:block; width:inherit; white-space:nowrap; overflow:hidden; text-align:left; padding: 0 2px;}
+table.grid-table tr td .ux-select-box,
+table.grid-table tr td .ux-select-box-plan { display: inline-block; *display: inline; width: 60px; height: 17px; margin: 0px; text-align: left; }
+table.grid-table tr td .ux-select-box span,
+table.grid-table tr td .ux-select-box-plan span { height: 18px; float: left; display: block; padding: 0; text-align: left; white-space: nowrap; overflow: hidden; cursor: default; }
+table.grid-table tr.rowselected td{background-color:#e1e0d7;color:black;}
+
+table.grid-table-summary {position:absolute;bottom:0;width:700px;}
+table.grid-table tr.ux-summary td {font-size:11px;font-weight:bold;background-color:#e8c9cb;border-top:1px solid #e8afc8;border-right:1px solid #e8afc8;color:#333;height:25px;}
+
+
+table.approval {width:100%;background:#e5e5e5;border-spacing:7px;border-collapse: separate}
+table.approval tr th {padding:0 5px;}
+table.approval tr td input[type=text] {padding-left:3px;width:99.6%;height:20px;border:1px solid #ccc}
+table.approval tr td textarea {padding:3px;width:99.3%;border:1px solid #ccc;resize:none;}
+table.approval thead tr th {text-align:right;}
+table.approval thead tr td {padding-left:3px;height:20px;line-height:20px;border:1px solid #ccc;background:#FFF0F0;}
+table.approval tbody tr th {width:10%;text-align:right;}
+table.approval tbody tr td {width:90%;}
+ 
+.approval_grid {position:relative;margin-top:10px;width:100%;height:auto;background:#e5e5e5;overflow:hidden}
+.approval_grid p.subject {float:left;margin-top:100px;width:10.5%;text-align:center;vertical-align:middle;}
+.approval_grid .grid_box {float:left;width:89.5%;}
+ 
+/************************************************************************************************************ 
+	페이징
+************************************************************************************************************/
+.ux-grid-btm {width:100%;margin-bottom:20px;padding:2px 0; overflow:hidden;}
+.ux-grid-btm .ux-grid-page {float:left;}
+.ux-grid-btm a.ux-btn-default {float:left; margin-left:2px;}
+.ux-grid-btm .ux-grid-page a {display:block; float:left; margin:0 5px;}
+.ux-grid-btm .ux-grid-page a.ux-page-first {width:19px; height:18px; background:url(../img/btn_first.png) no-repeat left top; margin-left:0; overflow:hidden;}
+.ux-grid-btm .ux-grid-page a.ux-page-prev {width:13px; height:18px; background:url(../img/btn_prev.png) no-repeat left top; overflow:hidden;}
+.ux-grid-btm .ux-grid-page a.ux-page-next {width:13px; height:18px; background:url(../img/btn_next.png) no-repeat left top; overflow:hidden;}
+.ux-grid-btm .ux-grid-page a.ux-page-last {width:19px; height:18px; background:url(../img/btn_last.png) no-repeat left top; margin-right:0; overflow:hidden;}
+.ux-grid-btm .ux-grid-page a.ux-page-num {width:18px; height:16px; line-height:16px; font-size:11px; color:#333; text-align:center; border:1px solid #7c7a7a; overflow:hidden;}
+.ux-grid-btm .ux-grid-page a.ux-page-first,
+.ux-grid-btm .ux-grid-page a.ux-page-prev,
+.ux-grid-btm .ux-grid-page a.ux-page-next,
+.ux-grid-btm .ux-grid-page a.ux-page-last {margin-top:1px;}
+.ux-grid-btm .ux-grid-page a.ux-selected {background-color:#fefdd6; font-weight:bold;}
+.ux-grid-btm .ux-grid-page-info {float:left; height:18px; line-height:18px;font-size:11px;padding:0 5px 0 18px;}
+
+
+/* UI Object */
+.paginate_complex{float:left;padding:0;line-height:normal;text-align:center;}
+.paginate_complex a,
+.paginate_complex strong{display:inline-block;position:relative;z-index:2;margin:0 -3px;padding:1px 8px;border-left:1px solid #d6d6d6;border-right:1px solid #d6d6d6;background-color:#fff;font:bold 12px/16px Tahoma, Sans-serif;color:#323232;text-decoration:none;vertical-align:top}
+.paginate_complex a:hover,
+.paginate_complex a:active,
+.paginate_complex a:focus{background-color:#f8f8f8}
+.paginate_complex strong{color:#ff8600}
+.paginate_complex .direction{border:0;font-weight:normal;color:#767676;text-decoration:none !important;z-index:1}
+.paginate_complex .direction:hover,
+.paginate_complex .direction:active,
+.paginate_complex .direction:focus{color:#323232;background-color:#fff}
+.paginate_complex .prev{border-left:0}
+.paginate_complex .next{border-right:0}
+.paginate_complex .direction span{display:inline-block;position:relative;top:4px;width:0;height:0;font-size:0;line-height:0;vertical-align:top}
+.paginate_complex .prev span{*left:-4px;margin-right:1px;border:3px solid;border-top:solid #fff;border-bottom:solid #fff;border-left:0}
+.paginate_complex .next span{margin-left:1px;border:3px solid;border-top:solid #fff;border-bottom:solid #fff;border-right:0}
+/* //UI Object */
+
+/************************************************************************************************************ 
+	icon
+************************************************************************************************************/
+
+.icon_save {width:15px;height:28px;background:url(../img/icon/icon_save.png) no-repeat 0 0;}
+.icon_search {width:17px;height:28px;background:url(../img/icon/icon_search.png) no-repeat 0 0;}
+.icon_accept {width:16px;height:16px;background:url(../img/icon/accept.png) no-repeat 0 0;}
+.icon_cancel {width:16px;height:16px;background:url(../img/icon/cancel.png) no-repeat 0 0;}
+.icon_new {width:16px;height:16px;background:url(../img/icon/page_white_add.png) no-repeat 0 0;}
+.icon_edit {width:16px;height:16px;background:url(../img/icon/page_edit.png) no-repeat 0 0;}
+.icon_delete {width:16px;height:16px;background:url(../img/icon/bin.png) no-repeat 0 0;}
+.icon_submit {width:16px;height:16px;background:url(../img/icon/application_get.png) no-repeat 0 0;}
+.icon_confirm {width:16px;height:16px;background:url(../img/icon/tick.png) no-repeat 0 0;}
+.icon_open {width:16px;height:16px;background:url(../img/icon/application.png) no-repeat 0 0;}
+.icon_close {width:16px;height:16px;background:url(../img/icon/delete.png) no-repeat 0 0;}
+.icon_copy {width:16px;height:16px;background:url(../img/icon/page_copy.png) no-repeat 0 0;}
+.icon_apply {width:16px;height:16px;background:url(../img/icon/tick.png) no-repeat 0 0;}
+.icon_run {width:16px;height:16px;background:url(../img/icon/resultset_next.png) no-repeat 0 0;}
+.icon_view {width:16px;height:16px;background:url(../img/icon/application_view_list.png) no-repeat 0 0;}
+.icon_entry {width:16px;height:16px;background:url(../img/icon/page_add.png) no-repeat 0 0;}
+.icon_deal {width:16px;height:16px;background:url(../img/icon/add.png) no-repeat 0 0;}
+.icon_approval {width:16px;height:16px;background:url(../img/icon/pencil.png) no-repeat 0 0;}
+.icon_request_approval {width:16px;height:16px;background:url(../img/icon/accept.png) no-repeat 0 0;}
+.icon_po_cancel {width:16px;height:16px;background:url(../img/icon/cancel.png) no-repeat 0 0;}
+.icon_po_split {width:16px;height:16px;background:url(../img/icon/application_split.png) no-repeat 0 0;}
+.icon_language {width:16px;height:16px;background:url(../img/icon/world.png) no-repeat 0 0;}
+.icon_reject {width:16px;height:16px;background:url(../img/icon/cross.png) no-repeat 0 0;}
+.icon_plan {width:16px;height:16px;background:url(../img/icon/chart_bar.png) no-repeat 0 0;}
+.icon_kit {width:16px;height:16px;background:url(../img/icon/chart_pie.png) no-repeat 0 0;}
+/************************************************************************************************************ 
+	Button
+************************************************************************************************************/
+
+button.ux-btn-plus {width:20px; height:18px; background:url(../img/btn_plus.gif) no-repeat left top; overflow:hidden;}
+button.ux-btn-minus {width:20px; height:18px; background:url(../img/btn_minus.gif) no-repeat left top; overflow:hidden;}
+/*button.ux-btn-open,
+button.ux-btn-close {width:142px; height:15px; overflow:hidden;}*/
+.ux-btn-open,
+.ux-btn-close {margin:0 auto;width:142px; height:15px;}
+.ux-btn-open button {width:142px; height:15px;background:url(../img/btn_open.png) no-repeat left top;}
+.ux-btn-close button {width:142px; height:15px;background:url(../img/btn_close.png) no-repeat left top;}
+a.ux-btn-default {display:inline-block; width:auto; height:28px; padding-left:6px; background:url(../img/bg_btn_left5.png) no-repeat left top; zoom:1; overflow:hidden; cursor:pointer;}
+a.ux-btn-default span {display:block; float:left; height:22px; line-height:14px;padding:6px 12px 0 6px; font-size:11px; background:url(../img/bg_btn_right5.png) no-repeat right top; font-weight:bold;}
+a.ux-btn-default span i {float:left;margin-right:5px;}
+a.ux-btn-default2 span {color:#757575;}
+a.ux-btn-default3 {display:inline-block; width:auto; height:28px; padding-left:6px; background:url(../img/bg_btn_left4.gif) no-repeat left top; zoom:1; overflow:hidden; cursor:pointer;}
+a.ux-btn-default3 span {display:block; float:left; height:22px; padding:6px 12px 0 6px; font-size:11px; color:#04539d; background:url(../img/bg_btn_right4.gif) no-repeat right top; font-weight:bold;}
+a.ux-btn-point {display:inline-block; width:auto; height:28px; padding-left:6px; background:url(../img/bg_btn_left2.gif) no-repeat left top; zoom:1; overflow:hidden; cursor:pointer;}
+a.ux-btn-point span {display:block; float:left; height:22px; padding:6px 12px 0 6px; font-size:11px; color:#b40243; background:url(../img/bg_btn_right2.gif) no-repeat right top; font-weight:bold;}
+a.ux-btn-layer {display:inline-block; width:auto; height:28px; padding-left:6px; background:url(../img/bg_btn_left3.gif) no-repeat left top; zoom:1; overflow:hidden; cursor:pointer;}
+a.ux-btn-layer span {display:block; float:left; height:22px; padding:6px 12px 0 6px; font-size:11px; color:#464646; background:url(../img/bg_btn_right3.gif) no-repeat right top; font-weight:bold;}
+button.ux-btn-zoom-in,
+button.ux-btn-zoom-out {width:27px; height:23px; overflow:hidden;}
+button.ux-btn-zoom-in {background:url(../img/btn_zoom_in.gif) no-repeat left top;}
+button.ux-btn-zoom-out {background:url(../img/btn_zoom_out.gif) no-repeat left top;}
+button.ux-btn-exel {width:30px; height:23px; background:url(../img/excel_down.gif) no-repeat left top; overflow:hidden;}
+button.ux-btn-exelup {width:30px; height:23px; background:url(../img/excel_up.gif) no-repeat left top; overflow:hidden;}
+button.ux-btn-setting {width:27px; height:23px; background:url(../img/btn_setting.gif) no-repeat left top; overflow:hidden;}
+button.ux-btn-zoom-in{width:27px; height:23px; background:url(../img/btn_zoom_in.gif) no-repeat left top; overflow:hidden;}
+button.ux-btn-zoom-in span,
+button.ux-btn-zoom-out span,
+button.ux-btn-exel span,
+button.ux-btn-setting span {visibility:hidden;}
+button.ux-btn-lnb-close,
+button.ux-btn-lnb-open {position:absolute; left:0; top:50%; margin-top:-45px; width:14px; height:89px; overflow:hidden;}
+button.ux-btn-lnb-close {background:url(../img/btn_lnb_close.gif) no-repeat left top;}
+button.ux-btn-lnb-open {background:url(../img/btn_lnb_open.gif) no-repeat left top;}
+button.ux-btn-delete {width:17px; height:12px; background:url(../img/btn_delete.gif) no-repeat left top; overflow:hidden;}
+button.ux-btn-add {width:17px; height:12px; background:url(../img/btn_add.gif) no-repeat left top; overflow:hidden;}
+button.ux-btn-refresh {width:27px; height:23px; background:url(../img/btn_refresh.gif) no-repeat left top; overflow:hidden;}
+button.ux-btn-move-left,
+button.ux-btn-move-right {display:block; width:24px; height:24px; overflow:hidden;}
+button.ux-btn-move-left {background:url(../img/btn_move_left.gif) no-repeat left top;}
+button.ux-btn-move-right {background:url(../img/btn_move_right.gif) no-repeat left top;}
+button.ux-btn-reset {width:27px; height:23px; background:url(../img/btn_reset.gif) no-repeat left top; overflow:hidden;}
+button.ux-btn-save {width:82px; height:23px; background:url(../img/btn_save.gif) no-repeat right top; overflow:hidden;}
+button.ux-btn-new {width:79px; height:23px; background:url(../img/btn_new.gif) no-repeat right top; overflow:hidden;}
+button.ux-btn-search {width:53px; height:20px; background:url(../img/btn_search.gif) no-repeat right top; overflow:hidden;}
+button.ux-btn-requestApproval {width:174px; height:24px; background:url(../img/btn_requestApproval.gif) no-repeat right top; overflow:hidden;}

@@ -1,0 +1,21 @@
+*@charset "utf-8";
+
+
+body{ font-family: "Tahoma", "돋움", Dotum, "굴림", gulim, AppleGothic,  "Sans-serif" ; margin:0; padding:0;}
+
+h1{ float:left; margin:0; padding:8px 0 0 5px;}
+h2{ font-size:12px; padding-bottom:10px; color:#a5204d;  }
+h3{font-size:12px; padding-bottom:10px; color:#555555; display:inline; } /*타이틀색상변경*/
+
+.error_contain{  float:left;  width:700px; position:absolute;left:25%;top:25%;}
+.error_body{ width:100%; padding-top:10px;font-size:15px;}
+
+.error_body .btext{   width:100%; font-size:18px; margin:0; padding:0; background-color:#ffffff;  color:#4e76a8; font-weight:bold; height:25x;text-align:center; border-bottom:1px solid #cccccc; padding-left:10px; }
+.error_body .text{   width:100%; margin:0; padding:0; background-color:#ffffff;  color:#555555; font-weight:nomal; height:25px; text-align:center; border-bottom:0px solid #cccccc; padding-left:10px; }
+
+.error_xcontain{  float:left;  width:700px; position:absolute;left:1%;top:10%;}
+.error_xbody{ width:100%; padding-top:10px;font-size:15px;}
+
+.error_xbody .btext{   width:100%; font-size:18px; margin:0; padding:0; background-color:#ffffff;  color:#4e76a8; font-weight:bold; height:25x;text-align:left; border-bottom:1px solid #cccccc; padding-left:10px; }
+.error_xbody .text{   width:100%; margin:0; padding:0; background-color:#ffffff;  color:#555555; font-weight:nomal; height:25px; text-align:left; border-bottom:0px solid #cccccc; padding-left:10px; }
+

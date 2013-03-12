@@ -1,0 +1,7 @@
+/*
+Copyright (c) 2011, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 2.9.0
+*/
+body{font:11px/1.231 arial,helvetica,clean,sans-serif;*font-size:small;*font:x-small;*font-family: "Tahoma",, Dotum, gulim, AppleGothic, "Sans-serif";}select,input,textarea,button{font:98% arial,helvetica,clean,sans-serif}table{font-size:inherit;font:99%}pre,code,kbd,samp,tt{font-family:monospace;*font-size:100%;line-height:100%}
